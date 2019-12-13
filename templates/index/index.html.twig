@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My Hero Academia fanblog, Bienvenue sur ma homepage{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>{{ head_title }}!</h1>
+
+    <ul>
+        {% for category in categories %}
+            <h2>{{ category.title }}</h2>
+            {% for character in category.protagonists %}
+                <li>
+                    <article>
+                            <h3>{{ character.name }}</h3>
+                            <p>{{ character.description }}</p>
+                            <a href="{{ path('character_show', {'id' : character.id}) }}"> Read More </a>
+                    </article>
+                </li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+
+</div>
+{% endblock %}

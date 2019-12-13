@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My Hero Academia fanblog, Bienvenue sur ma homepage{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+    <main>
+
+        <article class="example-wrapper">
+            <h1>{{ protagonist.name }}!</h1>
+
+            <h2>{{ protagonist.category.title | replace({'s' : ' ', 'es' : ' '}) }}</h2>
+
+            <p>{{ protagonist.description }}</p>
+
+            <h3>Tags</h3>
+            <ul>
+                {% for tag in protagonist.tags %}
+                    <li>{{ tag.name }}</li>
+                {% endfor %}
+            </ul>
+
+            <h3>Clubs</h3>
+            <ul>
+                {% for club in protagonist.registrations %}
+                    <li>{{ club.club.name }} registered the : {{ club.registrationDate | date("m/d/Y") }}</li>
+                {% endfor %}
+            </ul>
+
+            <h3>Events</h3>
+            <ul>
+                {% for event in protagonist.eventRegistrations %}
+                    <li>{{ event.event.name }} Registered the : {{ event.registrationDate | date("m/d/Y") }}</li>
+                {% endfor %}
+            </ul>
+
+        </article>
+
+    </main>
+{% endblock %}
