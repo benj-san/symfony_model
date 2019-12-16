@@ -1,0 +1,12 @@
+{{ form_start(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.japaneseName) }}
+    {{ form_row(form.description) }}
+    {{ form_row(form.picture) }}
+    {{ form_row(form.background) }}
+    {{ form_row(form.isAlive) }}
+    {{ form_row(form.category) }}
+    {{ form_row(form.tags) }}
+    {{ form_row(form.eventRegistrations) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

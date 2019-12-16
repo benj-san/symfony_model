@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="sf_mha@localhost" uuid="bce2cc3d-b262-4d7e-aa5c-24a268a62810">
+    <data-source source="LOCAL" name="sf_mha@localhost [2]" uuid="e28d1d27-1989-4d6a-a562-92f10a8a4ff1">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/sf_mha</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="my_hero_academia@localhost" uuid="676779d0-dc7d-452d-b2d8-838a5503b875">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/my_hero_academia</jdbc-url>
     </data-source>
   </component>
 </project>
