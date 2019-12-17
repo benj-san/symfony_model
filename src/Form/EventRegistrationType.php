@@ -26,9 +26,8 @@ class EventRegistrationType extends AbstractType
             ->add('event', EntityType::class, [
                 'class' => Event::class,
                 'choice_label' => 'name',
-                'multiple' => true,
+                'multiple' => false,
                 'expanded' => true,
-                'by_reference' => false,
             ])
         ;
     }

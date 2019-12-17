@@ -72,7 +72,10 @@ class ProtagonistType extends AbstractType
                 'by_reference' => false,
             ])
             ->add('eventRegistrations', CollectionType::class, [
-                'entry_type' => EventRegistrationType::class
+                'entry_type' => EventRegistrationType::class,
+                'allow_add' => true,
+                'prototype' => true,
+                'by_reference' => false,
             ])
         ;
     }
