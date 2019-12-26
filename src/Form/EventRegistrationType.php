@@ -27,8 +27,7 @@ class EventRegistrationType extends AbstractType
                 'class' => Event::class,
                 'choice_label' => 'name',
                 'multiple' => true,
-                'expanded' => true,
-                'by_reference' => false,
+                'expanded' => true
             ])
         ;
     }

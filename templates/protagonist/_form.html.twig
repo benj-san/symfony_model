@@ -7,6 +7,10 @@
     {{ form_row(form.isAlive) }}
     {{ form_row(form.category) }}
     {{ form_row(form.tags) }}
-    {{ form_row(form.eventRegistrations) }}
+{#    {{ form_row(form.eventRegistrations) }}#}
+    {#<button type="button"
+            class="add-another-collection-widget"
+            data-list-selector="#protagonist_eventRegistrations">Add another envent
+    </button>#}
     <button class="btn">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}

@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\EventRegistrationRepository")
+ * @ORM\HasLifecycleCallbacks
  */
 class EventRegistration
 {
@@ -70,5 +71,13 @@ class EventRegistration
         $this->event = $event;
 
         return $this;
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function timeStamp()
+    {
+        $this->setRegistrationDate(new \DateTime());
     }
 }

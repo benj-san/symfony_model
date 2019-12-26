@@ -34,18 +34,12 @@ class Event
     private $end_date;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Protagonist", inversedBy="events")
-     */
-    private $protagonists;
-
-    /**
      * @ORM\OneToMany(targetEntity="App\Entity\EventRegistration", mappedBy="event")
      */
     private $eventRegistrations;
 
     public function __construct()
     {
-        $this->protagonists = new ArrayCollection();
         $this->eventRegistrations = new ArrayCollection();
     }
 
@@ -86,32 +80,6 @@ class Event
     public function setEndDate(?\DateTimeInterface $end_date): self
     {
         $this->end_date = $end_date;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Protagonist[]
-     */
-    public function getProtagonists(): Collection
-    {
-        return $this->protagonists;
-    }
-
-    public function addProtagonist(Protagonist $protagonist): self
-    {
-        if (!$this->protagonists->contains($protagonist)) {
-            $this->protagonists[] = $protagonist;
-        }
-
-        return $this;
-    }
-
-    public function removeProtagonist(Protagonist $protagonist): self
-    {
-        if ($this->protagonists->contains($protagonist)) {
-            $this->protagonists->removeElement($protagonist);
-        }
 
         return $this;
     }

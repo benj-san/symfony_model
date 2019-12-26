@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a9f674f6142bb69f0c05d42a178dd942",
+    "content-hash": "60a907e2b45711668e81392918767b40",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1838,16 +1838,16 @@
         },
         {
             "name": "sensio/framework-extra-bundle",
-            "version": "v5.5.1",
+            "version": "v5.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "dfc2c4df9f7d465a65c770e9feb578fe071636f7"
+                "reference": "92acfcc610e2180c52790ec3ff2e893f67e76b32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/dfc2c4df9f7d465a65c770e9feb578fe071636f7",
-                "reference": "dfc2c4df9f7d465a65c770e9feb578fe071636f7",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/92acfcc610e2180c52790ec3ff2e893f67e76b32",
+                "reference": "92acfcc610e2180c52790ec3ff2e893f67e76b32",
                 "shasum": ""
             },
             "require": {
@@ -1912,7 +1912,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2019-10-16T18:54:45+00:00"
+            "time": "2019-12-12T16:21:49+00:00"
         },
         {
             "name": "symfony/asset",
@@ -4504,16 +4504,16 @@
         },
         {
             "name": "symfony/security-bundle",
-            "version": "v5.0.1",
+            "version": "v5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-bundle.git",
-                "reference": "ac38677600639af46d7f97fa7a5377032f1a4df7"
+                "reference": "5cf83dea155ae9666dd491470d760c126e4dab98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/ac38677600639af46d7f97fa7a5377032f1a4df7",
-                "reference": "ac38677600639af46d7f97fa7a5377032f1a4df7",
+                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/5cf83dea155ae9666dd491470d760c126e4dab98",
+                "reference": "5cf83dea155ae9666dd491470d760c126e4dab98",
                 "shasum": ""
             },
             "require": {
@@ -4583,7 +4583,7 @@
             ],
             "description": "Symfony SecurityBundle",
             "homepage": "https://symfony.com",
-            "time": "2019-11-30T14:12:50+00:00"
+            "time": "2019-12-16T10:47:49+00:00"
         },
         {
             "name": "symfony/security-core",
@@ -4838,16 +4838,16 @@
         },
         {
             "name": "symfony/serializer",
-            "version": "v5.0.1",
+            "version": "v5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/serializer.git",
-                "reference": "8d565a47eede00bd69f04db8050e5bae1b9553ad"
+                "reference": "3cfc478c102f2d3bcf60edd339cd9c3cb446a576"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/serializer/zipball/8d565a47eede00bd69f04db8050e5bae1b9553ad",
-                "reference": "8d565a47eede00bd69f04db8050e5bae1b9553ad",
+                "url": "https://api.github.com/repos/symfony/serializer/zipball/3cfc478c102f2d3bcf60edd339cd9c3cb446a576",
+                "reference": "3cfc478c102f2d3bcf60edd339cd9c3cb446a576",
                 "shasum": ""
             },
             "require": {
@@ -4916,7 +4916,7 @@
             ],
             "description": "Symfony Serializer Component",
             "homepage": "https://symfony.com",
-            "time": "2019-11-28T14:32:28+00:00"
+            "time": "2019-12-16T11:08:25+00:00"
         },
         {
             "name": "symfony/serializer-pack",
@@ -5873,6 +5873,64 @@
             "time": "2019-11-18T17:27:11+00:00"
         },
         {
+            "name": "tattali/calendar-bundle",
+            "version": "v1.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tattali/CalendarBundle.git",
+                "reference": "c2310a9509a105cb6046acd78c388a68fdbdafba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tattali/CalendarBundle/zipball/c2310a9509a105cb6046acd78c388a68fdbdafba",
+                "reference": "c2310a9509a105cb6046acd78c388a68fdbdafba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1",
+                "symfony/dependency-injection": "^3.4 || ^4.0 || ^5.0",
+                "symfony/event-dispatcher": "^3.4 || ^4.0 || ^5.0",
+                "symfony/framework-bundle": "^3.4 || ^4.0 || ^5.0"
+            },
+            "require-dev": {
+                "phpspec/prophecy": "^1.8",
+                "phpunit/phpunit": "^7.5",
+                "symfony/dotenv": "^4.2",
+                "symfony/phpunit-bridge": "^4.2",
+                "symfony/yaml": "^4.2"
+            },
+            "suggest": {
+                "doctrine/mongodb-odm-bundle": "To support MongoDB.",
+                "symfony/orm-pack": "To support Doctrine ORM and Migration."
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "CalendarBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Théo Attali",
+                    "email": "theoattali@gmail.com",
+                    "homepage": "https://theoattali.fr"
+                }
+            ],
+            "description": "Provides event calendar for your Symfony 4 project. Compatible with Doctrine ORM & ODM, and API like Google Calendar.",
+            "homepage": "https://github.com/tattali/CalendarBundle",
+            "keywords": [
+                "calendar",
+                "fullcalendar",
+                "symfony",
+                "symfony calendar"
+            ],
+            "time": "2019-12-15T17:00:27+00:00"
+        },
+        {
             "name": "twig/extra-bundle",
             "version": "v3.0.0",
             "source": {
@@ -6152,6 +6210,136 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "doctrine/data-fixtures",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/data-fixtures.git",
+                "reference": "608a35a3b5bcc4214d116603095f8b0c51091592"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/608a35a3b5bcc4214d116603095f8b0c51091592",
+                "reference": "608a35a3b5bcc4214d116603095f8b0c51091592",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.11",
+                "php": "^7.2"
+            },
+            "conflict": {
+                "doctrine/phpcr-odm": "<1.3.0"
+            },
+            "require-dev": {
+                "alcaeus/mongo-php-adapter": "^1.1",
+                "doctrine/coding-standard": "^6.0",
+                "doctrine/dbal": "^2.5.4",
+                "doctrine/mongodb-odm": "^1.3.0",
+                "doctrine/orm": "^2.5.4",
+                "phpunit/phpunit": "^7.0"
+            },
+            "suggest": {
+                "alcaeus/mongo-php-adapter": "For using MongoDB ODM with PHP 7",
+                "doctrine/mongodb-odm": "For loading MongoDB ODM fixtures",
+                "doctrine/orm": "For loading ORM fixtures",
+                "doctrine/phpcr-odm": "For loading PHPCR ODM fixtures"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\DataFixtures\\": "lib/Doctrine/Common/DataFixtures"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                }
+            ],
+            "description": "Data Fixtures for all Doctrine Object Managers",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database"
+            ],
+            "time": "2019-10-30T20:03:18+00:00"
+        },
+        {
+            "name": "doctrine/doctrine-fixtures-bundle",
+            "version": "3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/DoctrineFixturesBundle.git",
+                "reference": "8f07fcfdac7f3591f3c4bf13a50cbae05f65ed70"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/8f07fcfdac7f3591f3c4bf13a50cbae05f65ed70",
+                "reference": "8f07fcfdac7f3591f3c4bf13a50cbae05f65ed70",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/data-fixtures": "^1.3",
+                "doctrine/doctrine-bundle": "^1.11|^2.0",
+                "doctrine/orm": "^2.6.0",
+                "php": "^7.1",
+                "symfony/config": "^3.4|^4.3|^5.0",
+                "symfony/console": "^3.4|^4.3|^5.0",
+                "symfony/dependency-injection": "^3.4|^4.3|^5.0",
+                "symfony/doctrine-bridge": "^3.4|^4.1|^5.0",
+                "symfony/http-kernel": "^3.4|^4.3|^5.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^6.0",
+                "phpunit/phpunit": "^7.4",
+                "symfony/phpunit-bridge": "^4.1|^5.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Bundle\\FixturesBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Doctrine Project",
+                    "homepage": "http://www.doctrine-project.org"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony DoctrineFixturesBundle",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "Fixture",
+                "persistence"
+            ],
+            "time": "2019-11-13T15:46:58+00:00"
+        },
         {
             "name": "easycorp/easy-log-handler",
             "version": "v1.0.9",

@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/protagonist")
+ * @Route("/admin/protagonist")
  */
 class ProtagonistController extends AbstractController
 {
@@ -35,6 +35,7 @@ class ProtagonistController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($protagonist);
             $entityManager->flush();

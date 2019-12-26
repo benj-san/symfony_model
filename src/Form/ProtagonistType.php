@@ -42,7 +42,7 @@ class ProtagonistType extends AbstractType
                 'label' => false
             ])
             ->add('description', TextareaType::class, [
-                'attr' => ['placeholder' => 'Protagonist Description*'],
+                'attr' => ['placeholder' => 'Protagonist Description *'],
                 'label' => false
             ])
             ->add('picture', TextType::class, [
@@ -71,9 +71,12 @@ class ProtagonistType extends AbstractType
                 'multiple' => true,
                 'by_reference' => false,
             ])
-            ->add('eventRegistrations', CollectionType::class, [
-                'entry_type' => EventRegistrationType::class
-            ])
+            /*->add('eventRegistrations', CollectionType::class, [
+                'entry_type' => EventRegistrationType::class,
+                'allow_add' => true,
+                'prototype' => true,
+                'by_reference' => false
+            ])*/
         ;
     }
 
