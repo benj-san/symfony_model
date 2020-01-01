@@ -13,6 +13,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -45,7 +46,7 @@ class ProtagonistType extends AbstractType
                 'attr' => ['placeholder' => 'Protagonist Description *'],
                 'label' => false
             ])
-            ->add('picture', TextType::class, [
+            ->add('pictureFile', FileType::class, [
                 'required' => false,
                 'attr' => ['placeholder' => 'Protagonist pic'],
                 'label' => false,

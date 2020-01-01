@@ -19,6 +19,11 @@
                     <article>
                             <h3>{{ character.name }}</h3>
                             <p>{{ character.description }}</p>
+                        {% if character.picture %}
+                            <img src="/picture/hero/{{ character.picture }}" alt="{{ character.name }}">
+                        {% else %}
+                            <img src="{{ asset('build/picture/default.png') }}" alt="{{ character.name }}">
+                        {% endif %}
                             <a href="{{ path('character_show', {'id' : character.id}) }}"> Read More </a>
                     </article>
                 </li>
