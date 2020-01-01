@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Protagonist index{% endblock %}
+
+{% block body %}
+    <h1>Protagonist index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>JapaneseName</th>
+                <th>Description</th>
+                <th>Picture</th>
+                <th>Background</th>
+                <th>Updated_at</th>
+                <th>IsAlive</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for protagonist in protagonists %}
+            <tr>
+                <td>{{ protagonist.id }}</td>
+                <td>{{ protagonist.name }}</td>
+                <td>{{ protagonist.japaneseName }}</td>
+                <td>{{ protagonist.description }}</td>
+                <td>{{ protagonist.picture }}</td>
+                <td>{{ protagonist.background }}</td>
+                <td>{{ protagonist.updatedAt ? protagonist.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ protagonist.isAlive ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('protagonist_show', {'id': protagonist.id}) }}">show</a>
+                    <a href="{{ path('protagonist_edit', {'id': protagonist.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('protagonist_new') }}">Create new</a>
+{% endblock %}

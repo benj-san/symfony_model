@@ -69,13 +69,10 @@ class Protagonist
      */
     private $isAlive;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Event", mappedBy="protagonists")
-     */
-    private $events;
+
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\EventRegistration", mappedBy="protagonist")
+     * @ORM\OneToMany(targetEntity="App\Entity\EventRegistration", mappedBy="protagonist", cascade={"persist"})
      */
     private $eventRegistrations;
 
@@ -247,33 +244,6 @@ class Protagonist
         return $this;
     }
 
-    /**
-     * @return Collection|Event[]
-     */
-    public function getEvents(): Collection
-    {
-        return $this->events;
-    }
-
-    public function addEvent(Event $event): self
-    {
-        if (!$this->events->contains($event)) {
-            $this->events[] = $event;
-            $event->addProtagonist($this);
-        }
-
-        return $this;
-    }
-
-    public function removeEvent(Event $event): self
-    {
-        if ($this->events->contains($event)) {
-            $this->events->removeElement($event);
-            $event->removeProtagonist($this);
-        }
-
-        return $this;
-    }
 
     /**
      * @return Collection|EventRegistration[]
